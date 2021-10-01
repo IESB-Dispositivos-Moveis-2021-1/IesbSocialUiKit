@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ya-ka-o1m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ya-ka-o1m">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +19,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="defaultUserCell" textLabel="sg1-J5-TUM" detailTextLabel="2S7-lM-ep8" style="IBUITableViewCellStyleSubtitle" id="pGz-Fu-vxh">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pGz-Fu-vxh" id="kyz-ZE-O87">
                                     <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
@@ -40,9 +41,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="tTX-AK-hjF" kind="show" identifier="userDetailSegue" id="i0c-0a-H3e"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,7 +48,13 @@
                             <outlet property="delegate" destination="lNZ-Ch-6dv" id="CWt-6e-Fj4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Usuários" id="WtP-kX-CQP"/>
+                    <navigationItem key="navigationItem" title="Usuários" id="WtP-kX-CQP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="nH2-is-Oix">
+                            <connections>
+                                <action selector="toggleEdit:" destination="lNZ-Ch-6dv" id="Hi7-uB-pl2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZV-8e-f50" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

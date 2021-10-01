@@ -13,11 +13,7 @@ class UserListTableViewController: UITableViewController {
     private let kBaseURL = "https://jsonplaceholder.typicode.com"
     
     
-    private var users = [User]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    private var users = [User]()
     
     
     // MARK - Ciclo de Vida
@@ -61,6 +57,9 @@ class UserListTableViewController: UITableViewController {
         
     }
     
+    @IBAction func toggleEdit(_ sender: UIBarButtonItem) {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+    }
     
     private func loadData() {
         if let url = URL(string: "\(kBaseURL)/users") {
@@ -91,6 +90,47 @@ class UserListTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { action, view, success in
+            success(true)
+        }
+        
+        let favorite = UIContextualAction(style: .normal, title: "Add Favorite") { action, view, success in
+            success(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete, favorite])
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { action, view, success in
+            success(true)
+        }
+        
+        let favorite = UIContextualAction(style: .normal, title: "Add Favorite") { action, view, success in
+            success(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete, favorite])
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            users.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
 }
 
 
@@ -103,6 +143,7 @@ extension UserListTableViewController: URLSessionDataDelegate {
             
             if let users = try? JSONDecoder().decode([User].self, from: data) {
                 self.users = users
+                self.tableView.reloadData()
             }
             
         }
