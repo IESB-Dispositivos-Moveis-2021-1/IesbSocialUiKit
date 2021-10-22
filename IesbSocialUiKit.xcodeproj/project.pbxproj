@@ -17,6 +17,8 @@
 		EB16B4F726F405CE00D7CDDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16B4F426F405CE00D7CDDC /* User.swift */; };
 		EB16B4F826F405CE00D7CDDC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16B4F526F405CE00D7CDDC /* Post.swift */; };
 		EB16B4FB26F41C8D00D7CDDC /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB16B4FA26F41C8D00D7CDDC /* UserDetailViewController.swift */; };
+		EB7467FD272241AD002C57CD /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7467FC272241AD002C57CD /* NewUserViewController.swift */; };
+		EBF0AD8927222D4B00542919 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF0AD8827222D4B00542919 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		EB16B4F426F405CE00D7CDDC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EB16B4F526F405CE00D7CDDC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EB16B4FA26F41C8D00D7CDDC /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		EB7467FC272241AD002C57CD /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
+		EBF0AD8827222D4B00542919 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 			children = (
 				EB16B4F026F4055E00D7CDDC /* UserListTableViewController.swift */,
 				EB16B4FA26F41C8D00D7CDDC /* UserDetailViewController.swift */,
+				EBF0AD8827222D4B00542919 /* MapViewController.swift */,
+				EB7467FC272241AD002C57CD /* NewUserViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 				EB16B4F826F405CE00D7CDDC /* Post.swift in Sources */,
 				EB16B4F726F405CE00D7CDDC /* User.swift in Sources */,
 				EB16B4F626F405CE00D7CDDC /* ViaCep.swift in Sources */,
+				EB7467FD272241AD002C57CD /* NewUserViewController.swift in Sources */,
+				EBF0AD8927222D4B00542919 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FF3T968R68;
+				DEVELOPMENT_TEAM = RRNNBMBSXJ;
 				INFOPLIST_FILE = IesbSocialUiKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FF3T968R68;
+				DEVELOPMENT_TEAM = RRNNBMBSXJ;
 				INFOPLIST_FILE = IesbSocialUiKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
